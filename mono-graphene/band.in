@@ -1,0 +1,5 @@
+&BANDS
+ outdir='./out/',
+ prefix='graphene',
+ filband='graphene.bands',
+/

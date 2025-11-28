@@ -1,0 +1,7 @@
+&DOS
+ prefix='aiida',
+ outdir='./out/',
+ fildos='graphene.dos'
+ emin=-15.0,
+ emax=15.0,
+/
