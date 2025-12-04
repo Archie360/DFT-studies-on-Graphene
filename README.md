@@ -74,10 +74,10 @@ Examples:
   - [Graphene/group_vel.png](Graphene/group_vel.png)
   - [Graphene/lifetimes.png](Graphene/lifetimes.png)
 
-## Scientific notes & best practices
+## Note
 - Use consistent q-point meshes across strain cases when comparing group velocities or lifetimes to avoid sampling artifacts (mesh size is set in each `first_order/` parse: `mesh = [50, 50, 1]`).
 - When converting scattering rates gamma → lifetime use: lifetime = 1 / (2 * 2 * pi * gamma) (see notebooks).
-- Keep pseudopotential and energy cutoff consistent across strains to isolate strain effects (see [Graphene/pseudo/](Graphene/pseudo/)).
+- Keep pseudopotential and energy cutoff consistent across strains to isolate strain effects .
 - Be mindful of Brillouin-zone path and label consistency (Gamma, M, K, Gamma) — path generation is via Phonopy API in parse scripts.
 
 ## Dependencies
@@ -88,17 +88,4 @@ Examples:
   - scienceplots (optional, used in plotting notebooks)
 - Jupyter / JupyterLab to run the notebooks
 
-## Quick commands
-- Generate parsed harmonic outputs (example for strain case):
-  - cd Graphene/graphene--4/first_order
-  - python parse.py
-  - Outputs: `band.pkl`, `gv.pkl` (see [`parse.py`](Graphene/graphene--4/first_order/parse.py))
-- Inspect third-order HDF5 with notebook:
-  - Open [Graphene/third.ipynb](Graphene/third.ipynb) and update HDF5 paths if needed:
-    - e.g. `f1 = h5py.File("./graphene--4/third_order/kappa-m20201.hdf5")`
-
-## References
-- Phonopy: Togo & Tanaka et al. (phonon dispersion and group velocities)
-- Phono3py: for anharmonic scattering and thermal conductivity
-- Quantum ESPRESSO: for DFT and forces
 
